@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <Windows.h>
 
 #define ROWS 4
 #define COLS 10
@@ -16,6 +17,7 @@ struct data
 
 int selectPlant(double humid, double temperature);
 int errorCheck(double humid, double temperature);
+void textcolor(int colorNum); //글자색 지정 함수
 
 int main()
 {
@@ -25,12 +27,15 @@ int main()
     int running = 1; // while문  시작
 
     srand((unsigned)time(NULL));
+    textcolor(10);
     printf("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
     printf("*                                                                                                           *\n");
     printf("*                                        Smart Farm 식물 추천 프로그램                                      *\n");
     printf("*                                                                                                           *\n");
     printf("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n\n");
     
+    textcolor(15);
+
     while (running) {
       
       
@@ -57,13 +62,17 @@ int main()
             break;
 
         case (2):
+            textcolor(14);
             printf("\n식물 추천 프로그램을 종료합니다.\n\n");
+            textcolor(15);
             printf("===================================\n\n");
             return 0;
             break;
         default:
+            textcolor(11);
             printf("\n\n잘못된 입력입니다.\n");
             printf("다시 입력해주세요.\n");
+            textcolor(15);
             printf("------------------------------------\n\n");
             break;
         }
@@ -134,9 +143,9 @@ int selectPlant(double humid, double temperature)
         printf("잘못된 입력입니다.\n");
         return 1;
     }
-
+    textcolor(10);
     printf("\n입력된 환경에 적합한 식물은 \"%s\" 입니다.\n\n\n", Plant[col][row]);
-
+    textcolor(15);
     return 0;
 }
 
@@ -149,9 +158,15 @@ int errorCheck(double humid, double temperature) {
     else
     {
         printf("\n온습도 데이터가 잘못되었습니다.\n");
+        textcolor(14);
         printf("프로그램을 종료합니다.\n\n");
+        textcolor(15);
         printf("------------------------------------\n\n");
 
         return 0;
     }
+}
+
+void textcolor(int colorNum) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colorNum);
 }
