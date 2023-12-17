@@ -18,21 +18,15 @@
     <ClCompile Include="plantChoice.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="sensor_main.c">
+    <ClCompile Include="..\..\..\func.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="func.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="plants.c">
+    <ClCompile Include="..\..\..\main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
+    <ClInclude Include="..\..\..\func.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

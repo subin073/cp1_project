@@ -127,14 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="func.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="..\..\..\func.c" />
+    <ClCompile Include="..\..\..\main.c" />
     <ClCompile Include="plantChoice.c" />
-    <ClCompile Include="plants.c" />
-    <ClCompile Include="sensor_main.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h" />
+    <ClInclude Include="..\..\..\func.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
