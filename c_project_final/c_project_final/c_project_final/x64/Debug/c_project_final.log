@@ -1,0 +1,5 @@
+﻿  Final_Func.c
+C:\Users\sumin\Desktop\C프1_project\cp1_project\cp1_project\Final_Func.c(1,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'finalFunc.h': No such file or directory
+  FinalMain.c
+C:\Users\sumin\Desktop\C프1_project\cp1_project\cp1_project\FinalMain.c(3,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'Final_Func.h': No such file or directory
+  코드를 생성하고 있습니다...
